@@ -1,0 +1,55 @@
+{
+  "title": "Jev vs Laya repair-cost sensitivity case study",
+  "disclaimer": "This is a small controlled case study, not a rigorous benchmark.",
+  "base_state": {
+    "project_goal": "Build a small walkable 3DGS scene for an early XR prototype.",
+    "quality_target": "The scene does not need to reconstruct every object perfectly. The main area only needs to feel spatially coherent and convincing enough for a small user test.",
+    "current_reconstruction": {
+      "main_seating_area": "mostly clear",
+      "camera_coverage": "good overall, but one walkway has weaker coverage",
+      "left_edge_objects": "slightly blurry",
+      "left_edge_capture_count": "moderate",
+      "left_edge_importance": "not the main focus",
+      "major_holes_in_main_area": false,
+      "navigable": true,
+      "noticeable_artifact_in_walkway": true,
+      "estimated_fix_time": "{{estimated_fix_time}}"
+    }
+  },
+  "questions": {
+    "p0_quality_sufficient": {
+      "type": "noul",
+      "instructions": "Is the current reconstruction quality sufficient for an early P0 XR user test?"
+    },
+    "artifact_impact": {
+      "type": "score",
+      "instructions": "How much would the noticeable artifact in the walkway negatively affect the early user test experience?",
+      "criteria": [
+        "No meaningful negative impact",
+        "Minor impact",
+        "Noticeable but acceptable impact",
+        "Significant impact",
+        "Severe impact that would undermine the test"
+      ]
+    },
+    "worth_fixing_now": {
+      "type": "noul",
+      "instructions": "Given that fixing the artifact would require {{question_cost_phrase}}, is it worth fixing before continuing?"
+    }
+  },
+  "conditions": {
+    "10min": {
+      "estimated_fix_time": "about 10 minutes of additional capture",
+      "question_cost_phrase": "about 10 minutes of additional capture"
+    },
+    "2h": {
+      "estimated_fix_time": "about 2 hours of additional capture",
+      "question_cost_phrase": "about 2 hours of additional capture"
+    },
+    "8h": {
+      "estimated_fix_time": "about 8 hours of additional capture and reconstruction work",
+      "question_cost_phrase": "about 8 hours of additional capture and reconstruction work"
+    }
+  }
+}
+

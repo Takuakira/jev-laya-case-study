@@ -1,0 +1,43 @@
+{
+  "note": "Recorded outputs from one run per condition. This is not a benchmark dataset.",
+  "conditions": {
+    "10min": {
+      "jev": {
+        "p0_quality_sufficient_true": 0.76,
+        "artifact_impact_score_out_of_4": 1.93,
+        "worth_fixing_now_true": 0.65
+      },
+      "laya": {
+        "p0_quality_sufficient_true": 0.5918,
+        "artifact_impact_score_out_of_4": 1.3435,
+        "worth_fixing_now_true": 0.5031
+      }
+    },
+    "2h": {
+      "jev": {
+        "p0_quality_sufficient_true": 0.73,
+        "artifact_impact_score_out_of_4": 1.98,
+        "worth_fixing_now_true": 0.56
+      },
+      "laya": {
+        "p0_quality_sufficient_true": 0.5939,
+        "artifact_impact_score_out_of_4": 1.3644,
+        "worth_fixing_now_true": 0.5141
+      }
+    },
+    "8h": {
+      "jev": {
+        "p0_quality_sufficient_true": 0.70,
+        "artifact_impact_score_out_of_4": 2.09,
+        "worth_fixing_now_true": 0.45
+      },
+      "laya": {
+        "p0_quality_sufficient_true": 0.5919,
+        "artifact_impact_score_out_of_4": 1.4809,
+        "worth_fixing_now_true": 0.5262
+      }
+    }
+  },
+  "laya_runtime_warning": "The tested checkpoint reported invalid temperature values and instructed users to treat affected confidence values as uncalibrated."
+}
+
